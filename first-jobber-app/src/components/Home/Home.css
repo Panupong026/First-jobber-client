@@ -5,19 +5,3 @@
     align-items: center;
     justify-content: center;
 }
-
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-.card-header{
-    background-color: #007bff;
-    color:white;
-}
-
-.card-body{
-    background-color: #f8f9fa;
-}
