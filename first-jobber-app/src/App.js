@@ -12,7 +12,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={
           <>
-            <Header />
             <Home />
           </>
         }

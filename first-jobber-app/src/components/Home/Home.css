@@ -1,7 +1,36 @@
-.home-page {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+.home {
+    margin-top: 70px !important;
+  }
+  
+  form {
+    text-align: left;
+  }
+  
+  .title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #212529;
+    text-align: left;
+    font-family: "DM Serif Display", serif;
+    margin-bottom: 20px;
+  }
+  
+  .sub-title {
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  .login-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .home {
+      margin-top: 50px !important;
+    }
+    .col-sm {
+      margin-left: 20px;
+    }
+  }
+  
