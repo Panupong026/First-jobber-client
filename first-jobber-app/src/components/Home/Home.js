@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './Home.css';
 import { useNavigate } from "react-router-dom";
 import { Button, Form, Row, Col, FloatingLabel } from "react-bootstrap";
@@ -22,26 +21,38 @@ const Home = () => {
         .get("http://localhost:8000/users/")
         .then((res) => {
           console.log(res)
-          navigate("/questionare");
+          const user = res.data.find(user => user.username === profileData.username && user.password === profileData.password);
+          if (user) {
+            navigate("/questionare");
+          } else {
+            alert("Please try again. Username or Password is incorrect.");
+          }
         })
         .catch((err) => {
           console.log(err);
           alert("Please try again. Username or Password is incorrect.");
         });
-    } else if (e.nativeEvent.submitter.id === "signup") {
+    }
+    else if (e.nativeEvent.submitter.id === "signup") {
       axios
-        .post("http://localhost:8000/users/", profileData)
+        .get("http://localhost:8000/users/")
         .then((res) => {
-          if (res.data.name === "SequelizeUniqueConstraintError") {
+          console.log(res)
+          const user = res.data.find(user => user.username === profileData.username);
+          if (user) {
             alert("This username is already taken. Please try another.");
           } else {
-            let token = res.data;
-            localStorage.setItem("jwt", token);
-            navigate("/update-info");
+            axios
+              .post("http://localhost:8000/users/", profileData)
+              .then((res) => {
+                console.log(res)
+                navigate("/questionare");
+              });
           }
         });
     }
   };
+
 
   return (
     <Row className="home">
@@ -51,7 +62,7 @@ const Home = () => {
       </Col>
       <Col>
         <Form onSubmit={handleSubmit}>
-          <FloatingLabel label="Username" className="mb-3">
+          <FloatingLabel className="mb-3 input-box">
             <Form.Control
               id="username"
               type="text"
@@ -59,7 +70,7 @@ const Home = () => {
               onChange={handleProfileChange}
             />
           </FloatingLabel>
-          <FloatingLabel label="Password">
+          <FloatingLabel className='input-box'>
             <Form.Control
               id="password"
               type="password"
@@ -69,14 +80,18 @@ const Home = () => {
           </FloatingLabel>
           <Button
             id="login"
-            className="login-btn"
+            className="btn"
             variant="primary"
             type="submit"
           >
             Login
           </Button>
           &emsp;or&emsp;
-          <Button id="signup" variant="primary" type="submit">
+          <Button
+            id="signup"
+            className="btn"
+            variant="primary"
+            type="submit">
             Signup
           </Button>
         </Form>
