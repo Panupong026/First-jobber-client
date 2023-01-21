@@ -23,7 +23,7 @@ const Home = () => {
           console.log(res)
           const user = res.data.find(user => user.username === profileData.username && user.password === profileData.password);
           if (user) {
-            navigate("/questionare");
+            navigate("/questionnaire");
           } else {
             alert("Please try again. Username or Password is incorrect.");
           }
@@ -46,7 +46,7 @@ const Home = () => {
               .post("http://localhost:8000/users/", profileData)
               .then((res) => {
                 console.log(res)
-                navigate("/questionare");
+                navigate("/questionnaire");
               });
           }
         });
