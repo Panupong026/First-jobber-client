@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# First-jobber-client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+The application assists you who are the first jobber and newbie in insurance to choose your reasonable insurance. This app will ask you to fill in the form and recommend three suitable insurance.
 
-In the project directory, you can run:
+## Installation
+
+to install the package
+
+### `npm i` 
+
+runs the application
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Link
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Deploy Link](https://first-jobber-choice.netlify.app/)
 
-### `npm test`
+[Github Link](https://github.com/Panupong026/First-jobber-client/edit/main/first-jobber-app)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wirefram and User Interface
 
-### `npm run build`
+### Planning wireframe
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![form1](https://user-images.githubusercontent.com/116058313/213877771-0635641e-3a17-4843-a0da-c87586fa0fd7.jpg)
+![form2](https://user-images.githubusercontent.com/116058313/213877774-b0073145-2174-4f07-959f-91495496acbf.jpg)
+![form3](https://user-images.githubusercontent.com/116058313/213877775-28b00432-abb7-436c-8207-2e71808add4e.jpg)
+![form4](https://user-images.githubusercontent.com/116058313/213877776-ebb5a1ac-45f5-4829-9666-3caff4568224.jpg)
+![form5](https://user-images.githubusercontent.com/116058313/213877777-1dc21f36-2437-4388-ac87-570687d3374c.jpg)
+![home](https://user-images.githubusercontent.com/116058313/213877779-4efbf4a9-961a-4b6c-a050-7d61424d5883.jpg)
+![login](https://user-images.githubusercontent.com/116058313/213877782-456700c3-9b7c-4806-980d-35b320f1acae.jpg)
+![main](https://user-images.githubusercontent.com/116058313/213877783-e6827c4c-5f30-4362-9743-efff16053c06.jpg)
+![result](https://user-images.githubusercontent.com/116058313/213877784-79ed9a7f-355a-43ff-bc4a-1aa824eb4af6.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Actual wireframe
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Teachnology used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+I use react as a foudation of the application and mainly use react-bootrap for the user interface
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## User stories
+### MVP Goal:
+- [x] As a user, I want the application to have login/ logout/ signup features. So, I can collect the user’s data
+- [x] As a user, I want the user can fill in the form. So, I can collect the user characteristics
+- [x] As a developer, I want the application to have a function/ logic that analyst the user's answer. So, it will show the different recommendations for users.
+- [x] As a user, I want the application to recommend suitable insurance for the user. So that, they can decide.
+- [x] As a user, I want the application to be able to lead the user to make a purchase on the actual TIP website. So that, this website can boost sales.
+- [x] As a developer, I want my app to be responsive. So, the user can view it properly on different platforms.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Strech Goal:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [ ] As a user, I want the application to compare the three recommended insurance as a table. So, the user can compare the difference clearly.
+- [ ] As a user, I want to collect the latest answer from the user. So, the next time the user comes back, the application can show the latest status.
+- [ ] As a user, I want the application can export the recommended insurance detail. So, the user can download and keep it.
+- [x] As an admin, I want to have an admin feature that can CRUD the insurance table.
 
-## Learn More
+## Approch
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Frontend application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I can create a questionnaire application which is able to collect the user driving behavior and provide the suit insurance for them. Moreover the application lead them to the actual site for more information and make a purchase. 
 
-### Code Splitting
+### Backend application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+I can create the backend application which the admin can CRUD the insurance, user and coverage and export as a JSON file for the frontend application.
 
-### Analyzing the Bundle Size
+## What left?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Frontend application
 
-### Making a Progressive Web App
+I want the application have a better UX/UI and implement the logic. Moreover, I want the app to collect the user profile and collect it in the database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Backend application.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I want to have a UserInsurance table to collect the latest user's answer for the next time they come back, the application can still show the questionnaire history.
