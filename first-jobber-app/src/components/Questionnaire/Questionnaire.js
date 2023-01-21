@@ -65,6 +65,20 @@ const Questionnaire = () => {
     const [answers, setAnswers] = useState([]);
     const currentQuestion = questions[currentQuestionIndex];
 
+    const [formStarted, setFormStarted] = useState(false);
+
+    const handleStart = () => {
+        setFormStarted(true);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setAnswers(answers => [...answers, e.target.value]);
+        setFormStarted(false);
+        const tip = determineTip(answers);
+        console.log(tip);
+    }
+
     const handleAnswer = (option) => {
         setAnswers([...answers, option]);
         setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -86,7 +100,16 @@ const Questionnaire = () => {
 
     return (
         <div className="questionnaire-page">
-            {currentQuestion &&
+            {!formStarted && (
+                <div>
+                    <h1>Welcome to First Jobber Choice</h1>
+                    <br />
+                    <p>Click the button to start the questionnaire</p>
+                    <Button onClick={handleStart}>Start</Button>
+                </div>
+            )}
+            
+            {formStarted && currentQuestion &&
                 <Form onSubmit={handleAnswer}>
                     <Form.Group controlId="formQuestion">
                         <Form.Label>

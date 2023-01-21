@@ -78,7 +78,7 @@ const Result = (props) => {
 
         return (
             <Container>
-                <select onChange={handleChange} defaultValue={defaultOption}>
+                <select onChange={handleChange} defaultValue='Select for more insurance'>
                     <option value='Select for more insurance' disabled>Select for more insurance</option>
                     {props.data.map((item, index) => (
                         <option key={index} value={item.name}>
