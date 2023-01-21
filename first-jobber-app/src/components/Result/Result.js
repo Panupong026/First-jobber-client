@@ -69,6 +69,39 @@ const Result = (props) => {
         );
     };
 
+    const OtherData = (props) => {
+        const [selectedOption, setSelectedOption] = useState(null);
+
+        const handleChange = (e) => {
+            setSelectedOption(props.data.find(item => item.name === e.target.value));
+        }
+
+        return (
+            <Container>
+                <select onChange={handleChange} defaultValue={defaultOption}>
+                    <option value='Select for more insurance' disabled>Select for more insurance</option>
+                    {props.data.map((item, index) => (
+                        <option key={index} value={item.name}>
+                            {item.name}
+                        </option>
+                    ))}
+                </select>
+                {selectedOption && (
+                    <Card key={selectedOption.name}>
+                        <Card.Header className='item-title'>{selectedOption.name}</Card.Header>
+                        <ListGroup className="list-group-flush">
+                            <ListGroupItem>Class: {selectedOption.insurance_class}</ListGroupItem>
+                            <ListGroupItem>Starter price: {selectedOption.price}</ListGroupItem>
+                            <a href={selectedOption.urls} >For more detail</a>
+                        </ListGroup>
+                    </Card>
+                )}
+            </Container>
+        );
+    }
+
+
+
     return (
         <div>
             <h1>Thank you for taking the questionnaire! <br />This insurance might suit for you!</h1>
@@ -77,8 +110,9 @@ const Result = (props) => {
             />
             <br />
             <DataTable />
+            <h2>Reach out for more information</h2>
+            <OtherData data={props.data} />
             <Button className="try-again-button" href='/questionnaire'>Try again</Button>
-
         </div>
 
     );

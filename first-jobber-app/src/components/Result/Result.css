@@ -1,32 +1,33 @@
-/* Result.css */
-
 .item-title {
-    font-size: 1.5em;
-    font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 .list-group-flush {
-    padding: 0;
+    margin-bottom: 20px;
 }
 
-.try-again-button {
-    margin-top: 20px;
-    width: 100%;
-}
-
-
-.try-again-button {
+a {
+    text-align: center;
+    display: block;
     margin: 20px auto;
 }
 
-.fa-check {
-    color: green;
-    font-size: 20px;
+.try-again-button {
+    display: block;
+    margin: 20px auto;
 }
 
-.fa-times {
-    color: red;
-    font-size: 20px;
+table {
+    margin: 0 auto; 
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    border-collapse: collapse; 
+}
+
+th, td {
+    border: 1px solid #ccc; 
+    padding: 10px; 
 }
