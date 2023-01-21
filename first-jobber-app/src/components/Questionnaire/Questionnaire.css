@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+
+* {
+    font-family: 'Kanit', sans-serif;
+
+}
+
 .questionnaire-page {
     text-align: center;
 }

@@ -45,6 +45,8 @@ const Home = () => {
             axios
               .post("http://localhost:8000/users/", profileData)
               .then((res) => {
+                let token = res.data;
+                localStorage.setItem("jwt", token);
                 console.log(res)
                 navigate("/questionnaire");
               });

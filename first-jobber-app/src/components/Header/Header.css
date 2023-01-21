@@ -1,18 +1,27 @@
 .navbar {
   background-color: #0f0e9f; /* Change to desired color */
-  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: relative;
 }
 
-.navbar-brand {
-  font-size: 2em; /* Increase or decrease font size */
-  color: white; /* Change to desired color */
-  font-weight: bold;
+.logo {
+  width: 150px;
+  border-radius: 5px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
 }
 
 .nav-item {
   font-size: 1.2em; /* Increase or decrease font size */
   color: white; /* Change to desired color */
   margin-right: 20px; /* Increase or decrease margin */
+  position: absolute;
+  top: 22px;
+  right: 16px;
 }
 
 .nav-item:hover {
@@ -20,7 +29,12 @@
   cursor: pointer;
 }
 
-.logo {
-  width: 150px;
-  border-radius: 5px;
+.navbar-brand {
+  font-size: 2em; /* Increase or decrease font size */
+  color: white; /* Change to desired color */
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

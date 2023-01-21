@@ -21,3 +21,12 @@
     margin: 20px auto;
 }
 
+.fa-check {
+    color: green;
+    font-size: 20px;
+}
+
+.fa-times {
+    color: red;
+    font-size: 20px;
+}
