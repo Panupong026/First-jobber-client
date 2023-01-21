@@ -1,0 +1,28 @@
+.questionnaire-page {
+    text-align: center;
+}
+
+.questions {
+    text-align: center;
+    font-size: 2em;
+    margin: 30px;
+}
+
+
+.choice {
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px auto;
+    cursor: pointer;
+    width: 300px;
+    display:block;
+    font-size: 1.5em;
+}
+
+.choice:hover {
+    font-style: italic;
+    cursor: pointer;
+    background-color: #91bcd8; /* Change to desired color */
+}

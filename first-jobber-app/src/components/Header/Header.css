@@ -1,0 +1,26 @@
+.navbar {
+  background-color: #0f0e9f; /* Change to desired color */
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  font-size: 2em; /* Increase or decrease font size */
+  color: white; /* Change to desired color */
+  font-weight: bold;
+}
+
+.nav-item {
+  font-size: 1.2em; /* Increase or decrease font size */
+  color: white; /* Change to desired color */
+  margin-right: 20px; /* Increase or decrease margin */
+}
+
+.nav-item:hover {
+  color: #2980B9; /* Change to desired color */
+  cursor: pointer;
+}
+
+.logo {
+  width: 150px;
+  border-radius: 5px;
+}
