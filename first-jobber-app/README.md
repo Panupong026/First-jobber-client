@@ -36,6 +36,11 @@ runs the application
 
 ### Actual wireframe
 
+![image](https://user-images.githubusercontent.com/116058313/213916595-ea4dda44-c842-4519-abe4-4b59fab15956.png)
+![image](https://user-images.githubusercontent.com/116058313/213916633-de09ea0d-3267-4b72-a6ff-095c16a719b0.png)
+![image](https://user-images.githubusercontent.com/116058313/213916639-9551433f-4225-4338-85ce-334c4b50bddf.png)
+![image](https://user-images.githubusercontent.com/116058313/213916645-5a89767d-c62b-467e-a061-6793205cdea1.png)
+
 
 ## Teachnology used
 
